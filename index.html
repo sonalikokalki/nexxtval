@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANC_Project</title>
+  <!-- <link rel="stylesheet" href="assets/bootstrap-4.6.1/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" />
+  <!-- <link rel="stylesheet" href="assets/jqueryUI/jquery-ui.css"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- header section start -->
+  <div class="container-fluid container_head">
+    <div class="header">
+      <div class="icon_logo">
+      <div class="icon">
+        <!-- <i class="fas fa-bars"></i> -->
+        <img src="images/icon_bar.png" alt="">
+      </div>
+      <div class="logo">
+        <img src="images/logo.png" alt="logo" />
+      </div>
+    </div>
+
+      <div class="navBar">
+        <!-- Links -->
+
+        <a class="nav-link" href="#">Users</a>
+
+        <a class="nav-link active" href="#">Course</a>
+
+        <a class="nav-link" href="#">Training</a>
+
+        <a class="nav-link" href="#">Exams</a>
+
+        <a class="nav-link" href="#">Community Lab</a>
+
+        <a class="nav-link" href="#">Analytics</a>
+
+        <a class="nav-link" href="#">Administration</a>
+      </div>
+      <div class="bellicon_profile">
+      <div class="bellIcon">
+        <i class="fas fa-bell"></i>
+      </div>
+      <div class="profile">
+        <div class="profile_img">
+          <img src="images/profile_pic.png" alt="" />
+        </div>
+        <div class="profile_info">
+          <div class="profile_name">Abhishek Ghosh</div>
+          <div class="des">NextEduTech</div>
+        </div>
+        <div class="down_arrow">
+          <i class="fas fa-angle-down"></i>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- header section end -->
+
+  <!-- ANC body start -->
+  <div class="container-fluid ANC_body">
+    <!-- /////////////////////////////////
+    //////////// sidebar////////////-->
+    <div class="sidebar">
+      <div class="course_management">
+        <img src="images/sidebar_img.png" class="sidebar_img" alt="" />
+
+        <h3>Course Management</h3>
+      </div>
+      <div class="sidebar_menu">
+        <ul>
+          <li><a href="#zicops_courses">Zicops Courses</a></li>
+          <li><a class="active" href="#my_courses">My Courses</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#sub_categories">Sub-categories</a></li>
+          <li><a href="#dashboard">Dashboard</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- /////////////////////////////////
+    //////////// content////////////-->
+    <div class="content">
+      <div class="new_course">
+        <div class="add_course_head">
+          <div class="head">
+            <h3>Add a new Course</h3>
+            <form action="/action_page.php">
+              <select name="course" id="course" class="select_course">
+                <option value="self_paced">Self Paced</option>
+                <option value="maths">Maths</option>
+                <option value="audi">Audi</option>
+              </select>
+            </form>
+          </div>
+          <div class="icons">
+            <!-- <i class="fas fa-2x fa-cog"></i> -->
+            <!-- <i class="fas fa-2x fa-sitemap"></i>      -->
+            <img src="images/setting_icon.png" class="rightside_icon" alt="" />
+            <img src="images/sitemap_icon.png" class="rightside_icon" alt="" />
+          </div>
+        </div>
+        <!-- main content panel -->
+        <div class="main_content_panel">
+          <div class="tab_head">
+            <div id="tabs" class="tabs">
+
+              
+              <ul>
+                <li><a href="#course_master">Course Master</a></li>
+                <li><a href="#details">Details</a></li>
+                <li><a href="#topics">Topics</a></li>
+                <li><a href="#configration">Configration</a></li>
+              </ul>
+              <div id="course_master" class="course_master">
+              
+                <form class="course_master_form">
+                  <div class="row">
+                    <div class="col_25 td_label">
+                      <label for="name">Name</label>
+                    
+                    </div>
+                    <div class="col_75">
+                      <input type="text" id="name" class="td_inputfield"
+                        placeholder="Enter name of the course (upto 160 characters)" />
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col_25 td_label">
+                      <label for="select_category">Select Category</label>
+                   
+                    </div>
+                    <div class="col_75">
+                      <select name="select_course_category" id="select_course_category" class="td_inputfield">
+                        <option value="">
+                          Select the Category of the course
+                        </option>
+                        <option value="maths">Maths</option>
+                        <option value="audi">Audi</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col_25 td_label">
+                      <label for="select_base_subcategory">Select Base Sub Category</label>
+
+                    </div>
+                    <div class="col_75">
+                      <select name="select_course_category" id="select_course_category" class="td_inputfield">
+                        <option value="">
+                          Select the Category of the course
+                        </option>
+                        <option value="maths">Maths</option>
+                        <option value="audi">Audi</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+
+                    <div class="col_25 td_label">
+                      <label for="Categories_subCategories">Additional Categories/Sub-categories</label>
+                    </div>
+                    <div class="col_25 ">
+                      <div class="drag_category_area">
+                        <div class="search">
+                         
+                          <i class="fas fa-search"></i><input type="search" name="search" id="" placeholder="Search">
+                        
+                        </div>
+                        <div class="inner_drag_ele">
+                          Java
+                        </div>
+                        <div class="inner_drag_ele">
+                          Communication
+                        </div>
+                        <div class="inner_drag_ele">
+                         Sales
+                        </div>
+                        <div class="inner_drag_ele">
+                          Sales
+                         </div>
+                         <div class="inner_drag_ele">
+                          Sales
+                         </div>
+                         <div class="inner_drag_ele">
+                          Sales
+                         </div>
+                      </div>
+                     </div>
+                    <div class="col_25 ">
+                      <div class="drop_category_area">
+                        <div class="wrap_drop">
+                        <div class="Sr_no">1</div>
+                        <div class="inner_drop_ele">java</div>
+                      </div>
+                      <div class="wrap_drop">
+                        <div class="Sr_no">2</div>
+                        <div class="inner_drop_ele">java</div>
+                      </div>
+                      <div class="wrap_drop">
+                        <div class="Sr_no">3</div>
+                        <div class="inner_drop_ele">java</div>
+                      </div>
+                      <div class="wrap_drop">
+                        <div class="Sr_no">3</div>
+                        <div class="inner_drop_ele">java</div>
+                      </div>
+                      <div class="wrap_drop">
+                        <div class="Sr_no">3</div>
+                        <div class="inner_drop_ele">java</div>
+                      </div>
+                      <div class="wrap_drop">
+                        <div class="Sr_no">3</div>
+                        <div class="inner_drop_ele">java</div>
+                      </div>
+
+
+                        
+                      </div>
+                    </div>
+                    <div class="col_25 ">
+
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col_25 td_label">
+                      <label for="level_of_exoertise">Level Of Expertise</label>
+                    </div>
+                    <div class="col_25 td_label ">
+                      <input type="checkbox" id="beginner" name="beginner" value="Beginner" class="checkbox">
+                      <label for="beginner"> Beginner</label>
+                    </div>
+                    <div class="col_25 td_label">
+                      <input type="checkbox" id="competent" name="competent" value="Competent"class="checkbox">
+                      <label for="competent">Competent</label>
+                    </div>
+                    <div class="col_25 td_label">
+                      <input type="checkbox" id="proficient" name="proficient" value="Proficient"class="checkbox">
+                      <label for="proficient">Proficient</label>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col_25"></div>
+                    <div class="col_25">
+                      <div class="active_button">
+                        <label for="active_button" class="td_label">Active</label>
+
+
+                        <label class="switch">
+                          <input class="switch-input" type="checkbox" />
+                          <span class="switch-label" data-on="On" data-off="Off"></span> 
+                          <span class="switch-handle"></span> 
+                        </label>
+
+
+                      </div>
+                    </div>
+                    <div class="col_25">
+                      <div class="active_button">
+                        <label for="display_button" class="td_label">Display</label>
+                        <label class="switch">
+                          <input class="switch-input" type="checkbox" />
+                          <span class="switch-label" data-on="On" data-off="Off"></span> 
+                          <span class="switch-handle"></span> 
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col_25"></div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col_25 td_label">
+                      <label for="preview_of_course">Upload Preview of the course</label>
+                    </div>
+                    <div class="col_25 ">
+                      
+                      <div class="upload-btn-wrapper">
+                        
+                        <button class="btn"> 
+                          <span class="input-icon">
+                        
+                            <span><img src="images/upload.png" alt=""></span>
+                            
+                          </span>Browse & upload</button>
+                        <input type="file" name="myfile" />
+                      </div>
+
+                      <div class="preview_remove_links">
+                        <a href="http://" class="preview">Preview</a>
+                        <a href="http://" class="remove">Remove</a>
+                      </div>
+
+
+                    </div>
+                    <div class="col_25">
+                        
+                    </div>
+                    <div class="col_25">
+                     
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col_25 td_label">
+                      <label for="display_image">Display Image</label>
+                    </div>
+                    <div class="col_25 ">
+                      
+                      <div class="upload-btn-wrapper">
+                        
+                          <button class="btn"> 
+                            <span class="input-icon">
+                           
+                              <span><img src="images/upload.png" alt=""></span>
+                              
+                            </span>Browse & upload</button>
+                        <input type="file" name="myfile" />
+                      </div>
+                      <div class="preview_remove_links">
+                        <a href="http://" class="preview">Preview</a>
+                        <a href="http://" class="remove">Remove</a>
+                      </div>
+                    </div>
+                    <div class="col_25">
+                        
+                    </div>
+                    <div class="col_25">
+                     
+                    </div>
+                  </div>
+
+                  
+                  <div class="row">
+                    <div class="col_25 td_label">
+                      <label for="course_owner">Course Owner</label>
+
+                    </div>
+                    <div class="col_75">
+                      <select name="course_owner" id="course_owner" class="td_inputfield">
+                        <option value="">
+                          Select the owner of the course
+                        </option>
+                        <option value="maths">Maths</option>
+                        <option value="audi">Audi</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class=" row next_button" >
+                    
+          
+                    <input type="button" value="Next" class="btn_next">
+                  
+                  </div>
+                </form>
+              </div>
+              <!-- ///////////////////////////////// -->
+              <div id="details"></div>
+              <div id="topics"></div>
+              <div id="configration"></div>
+            </div>
+          </div>
+          
+          <div class="main_content_panel_footer">
+            <div class="status td_label">
+              Current status :<span class="draft">Draft</span>
+            </div>
+            <div class="cancel_save_button">
+              <input type="button" value="cancel" class="btn_foot">
+              <input type="button" value="save" class="btn_foot">
+            </div>
+          </div>
+        </div>
+<!-- /////////////////////// -->
+
+
+       
+      </div>
+    </div>
+
+  </div>
+  <!-- ANC body end -->
+
+  <!-- footer start -->
+  <div class="container-fluid footer">
+    <div class="footer_left">
+      <div class="footer_menu">
+        <a href="#about_piLearning">About PiLearning</a>
+        <a href="#terms_of_uses">Terms Of Uses</a>
+        <a href="#privacy_policy">Privacy Policy</a>
+        <a href="#faq">FAQ</a>
+        <a href="#feedback">Feedback</a>
+        <a href="#careers">Careers</a>
+      </div>
+
+      <p class="p_footer">
+        © 2021 PiLearning. All Rights Reserved. PiLearning and all related
+        channel and programming logos are service marks of, and all related
+        programming visuals and elemnts are the property of Pilearning,Inc.
+        All rights reserved.
+      </p>
+    </div>
+    <div class="footer_middle">
+      <div class="connect_us">
+        <p class="p_footer">Connect with us</p>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-linkedin-in"></i>
+      </div>
+    </div>
+    <div class="footer_right">
+      <p class="p_footer">PiLearning App</p>
+      <img src="images/play_store.png" alt="" style="width: 100px" />
+      <img src="images/app_store.png" alt="" class="store_images" style="width: 100px" />
+    </div>
+  </div>
+  <!-- footer end -->
+  <script src="assets/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="assets/jqueryUI/jquery-ui.js"></script>
+  <!-- <script src="assets/bootstrap-4.6.1/js/bootstrap.min.js"></script> -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>
